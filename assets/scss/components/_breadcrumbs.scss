@@ -1,0 +1,24 @@
+.breadcrumbs {
+  @include flexspace;
+  margin: 1.5rem 0;
+  &__left {
+    h4 {
+      font-size: 2.4rem;
+      color: $text-color;
+      font-weight: 600;
+      margin-bottom: 0.9rem;
+    }
+    .breadcrumb-item {
+      a {
+        color: $link-color;
+      }
+      &.active {
+        a {
+          color: $text-color;
+        }
+      }
+    }
+  }
+  // &__right {
+  // }
+}

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('#{$fonts-path}/poppins/light/Poppins-Light.eot');
+    src: url('#{$fonts-path}/poppins/light/Poppins-Light.eot?#iefix') format('embedded-opentype'),
+         url('#{$fonts-path}/poppins/light/Poppins-Light.ttf') format('truetype'),
+         url('#{$fonts-path}/poppins/light/Poppins-Light.woff') format('woff'),
+         url('#{$fonts-path}/poppins/light/Poppins-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('#{$fonts-path}/poppins/regular/Poppins-Regular.eot');
+    src: url('#{$fonts-path}/poppins/regular/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+         url('#{$fonts-path}/poppins/regular/Poppins-Regular.ttf') format('truetype'),
+         url('#{$fonts-path}/poppins/regular/Poppins-Regular.woff') format('woff'),
+         url('#{$fonts-path}/poppins/regular/Poppins-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('#{$fonts-path}/poppins/medium/Poppins-Medium.eot');
+    src: url('#{$fonts-path}/poppins/medium/Poppins-Medium.eot?#iefix') format('embedded-opentype'),
+         url('#{$fonts-path}/poppins/medium/Poppins-Medium.ttf') format('truetype'),
+         url('#{$fonts-path}/poppins/medium/Poppins-Medium.woff') format('woff'),
+         url('#{$fonts-path}/poppins/medium/Poppins-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('#{$fonts-path}/poppins/semi-bold/Poppins-SemiBold.eot');
+    src: url('#{$fonts-path}/poppins/semi-bold/Poppins-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('#{$fonts-path}/poppins/semi-bold/Poppins-SemiBold.ttf') format('truetype'),
+         url('#{$fonts-path}/poppins/semi-bold/Poppins-SemiBold.woff') format('woff'),
+         url('#{$fonts-path}/poppins/semi-bold/Poppins-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('#{$fonts-path}/poppins/bold/Poppins-Bold.eot');
+    src: url('#{$fonts-path}/poppins/bold/Poppins-Bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$fonts-path}/poppins/bold/Poppins-Bold.ttf') format('truetype'),
+         url('#{$fonts-path}/poppins/bold/Poppins-Bold.woff') format('woff'),
+         url('#{$fonts-path}/poppins/bold/Poppins-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

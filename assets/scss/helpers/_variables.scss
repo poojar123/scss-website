@@ -1,0 +1,45 @@
+// Fonts
+
+$primary-font: "Poppins", sans-serif;
+
+// path
+$images-path: "../images" !default;
+
+//fonts Path
+$fonts-path: "../fonts" !default;
+
+// Color
+$theme-colors: (
+  "primary": #0000ff,
+  "secondary": #24d3fd,
+  "success": #70b603,
+  "info": #5e29d2,
+  "warning": #e1a714,
+  "dark-warning": #b8741a,
+  "danger": #d9001b,
+  "light": #fbfbfb,
+  "dark": #1e283d,
+  "black": #000000,
+);
+$primary: #0000ff;
+$secondary: #24d3fd;
+$success: #70b603;
+$info: #5e29d2;
+$warning: #e1a714;
+$dark-warning: #b8741a;
+$danger: #d9001b;
+$light: #fbfbfb;
+$dark: #1e283d;
+$black: #000000;
+
+$primary-color: #fd4568;
+$secondary-color: #504450;
+$white-color: #ffffff;
+$body-bg: #2c3239;
+
+// text color
+$text-color: #1f1c1c;
+$link-color: #287de6;
+
+// border
+$border-color: #e8e8e8;

@@ -1,0 +1,317 @@
+/* placeholder */
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+$breakpoints: (
+  "custom-small-mobile-max": (
+    max-width: 360px,
+  ),
+  "portrait-mobile-max": (
+    max-width: 575px,
+  ),
+  "mobile-min": (
+    min-width: 576px,
+  ),
+  "mobile-max": (
+    max-width: 767px,
+  ),
+  "ipad-min": (
+    min-width: 768px,
+  ),
+  "ipad-max": (
+    max-width: 991px,
+  ),
+  "desktop-min": (
+    min-width: 992px,
+  ),
+  "desktop-max": (
+    max-width: 1199px,
+  ),
+  "large-desktop-min": (
+    min-width: 1200px,
+  ),
+  "medium-large-desktop-min": (
+    min-width: 1366px,
+  ),
+  "medium-large-desktop-maxwidth": (
+    max-width: 1279px,
+  ),
+  "medium-large-desktop-max": (
+    max-width: 1400px,
+  ),
+  "large-desktop-max": (
+    max-width: 1560px,
+  ),
+);
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  } @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}
+
+@mixin d-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexspace {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Transition
+@mixin transition($what: all, $time: 0.3s, $how: ease-in-out) {
+  transition: $what $time $how;
+}
+
+// rgba Border
+@mixin border-rgba($color, $opacity) {
+  border: 1px solid rgba(red($color), green($color), blue($color), $opacity);
+}
+
+// rgba Border Top
+@mixin border-top-rgba($color, $opacity) {
+  border-top: 1px solid rgba(red($color), green($color), blue($color), $opacity);
+}
+
+// rgba Border Bottom
+@mixin border-bottom-rgba($color, $opacity) {
+  border-bottom: 1px solid
+    rgba(red($color), green($color), blue($color), $opacity);
+}
+
+// rgba Border Left
+@mixin border-left-rgba($color, $opacity) {
+  border-left: 1px solid
+    rgba(red($color), green($color), blue($color), $opacity);
+}
+
+// rgba Border Right
+@mixin border-right-rgba($color, $opacity) {
+  border-right: 1px solid
+    rgba(red($color), green($color), blue($color), $opacity);
+}
+
+// Background Color rgba
+@mixin background-color-rgba($color, $opacity) {
+  background-color: rgba($color, $opacity);
+}
+
+// Color rgba
+@mixin color-rgba($color, $opacity) {
+  color: rgba($color, $opacity);
+}
+
+// Horizontal and Center Align using Transform
+@mixin horizontal-center-transform {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin vertical-center-transform {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-vertical-center-transform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin position-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+// Center Block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin primary-bg {
+  background: rgba($red-color, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba($red-color, 1) 0%,
+    rgba($pink-color, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba($red-color, 1)),
+    color-stop(100%, rgba($pink-color, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba($red-color, 1) 0%,
+    rgba($pink-color, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba($red-color, 1) 0%,
+    rgba($pink-color, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba($red-color, 1) 0%,
+    rgba($pink-color, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba($red-color, 1) 0%,
+    rgba($pink-color, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF4A4A', endColorstr='#FA3BB1', GradientType=1 );
+}
+
+@mixin greygradiancy {
+  background: rgba(244, 244, 244, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(244, 244, 244, 1) 0%,
+    rgba(244, 244, 244, 0.28) 73%,
+    rgba(122, 122, 122, 0.02) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(244, 244, 244, 1)),
+    color-stop(73%, rgba(244, 244, 244, 0.28)),
+    color-stop(100%, rgba(122, 122, 122, 0.02))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(244, 244, 244, 1) 0%,
+    rgba(244, 244, 244, 0.28) 73%,
+    rgba(122, 122, 122, 0.02) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(244, 244, 244, 1) 0%,
+    rgba(244, 244, 244, 0.28) 73%,
+    rgba(122, 122, 122, 0.02) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(244, 244, 244, 1) 0%,
+    rgba(244, 244, 244, 0.28) 73%,
+    rgba(122, 122, 122, 0.02) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 244, 244, 1) 0%,
+    rgba(244, 244, 244, 0.28) 73%,
+    rgba(122, 122, 122, 0.02) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#7a7a7a', GradientType=0 );
+}
+
+@mixin shadoweffect {
+  box-shadow: 0 53px 76px rgba(35, 45, 60, 0.16);
+}
+
+@mixin darkeffect {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12);
+}
+
+// new color
+// color
+@mixin color($color) {
+  color: $color !important;
+}
+// bg-color
+@mixin bg-color($color) {
+  background: $color !important;
+}
+@each $color, $value in $theme-colors {
+  .bg-#{$color} {
+    @include bg-color($value);
+  }
+}
+
+// custom scroll-bar
+@mixin custom-scroll-bar() {
+  &::-webkit-scrollbar {
+    border-radius: 0.5rem;
+    height: 10px;
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #222325;
+    border-radius: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0.5rem;
+    background-color: rgb(240, 238, 238);
+  }
+}
+
+// no scroll bar
+@mixin no-scroll-bar() {
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    height: 0;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    height: 0;
+    width: 0;
+  }
+}

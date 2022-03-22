@@ -1,0 +1,87 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  // color: $white-color;
+}
+h1,
+.h1 {
+  font-size: 3.2rem;
+}
+h2,
+.h2 {
+  font-size: 2.8rem;
+}
+h3,
+.h3 {
+  font-size: 2.4rem;
+}
+h4,
+.h4 {
+  font-size: 1.8rem;
+}
+h5,
+.h5 {
+  font-size: 1.6rem;
+}
+h6,
+.h6 {
+  font-size: 1.4rem;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+label {
+  margin: 0;
+}
+a {
+  color: $text-color;
+}
+a,
+a:hover,
+a::before,
+a::after,
+a:active,
+button,
+button:hover,
+button:focus,
+input,
+input:focus {
+  text-decoration: none;
+  @include transition;
+}
+
+a:hover,
+a::before,
+a::after,
+a:active,
+button:hover,
+button:focus,
+input:focus {
+  color: $link-color;
+}
+:focus,
+button:focus {
+  outline: none;
+}
+
+p {
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text-muted {
+  color: #8e9cad;
+}
+.img-icon {
+  width: auto;
+  height: 2rem;
+}

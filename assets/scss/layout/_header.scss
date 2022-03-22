@@ -1,0 +1,176 @@
+header {
+  margin-bottom: 2rem;
+  .fs-menu {
+    padding: 1rem 0;
+    border-bottom: 1px solid $border-color;
+  }
+  .navbar {
+    .navbar-brand {
+      .d-logo {
+        width: auto;
+        height: 4rem;
+        vertical-align: middle;
+        margin-right: 0.8rem;
+      }
+      .m-logo {
+        height: 2.5rem;
+        width: auto;
+      }
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      border: 1px solid $border-color;
+      padding: 0.2rem 1.5rem;
+      border-radius: 0.4rem;
+      margin-left: 0.8rem;
+      text-transform: capitalize;
+      position: relative;
+      cursor: pointer;
+      i {
+        font-size: 2rem;
+        color: $text-color;
+      }
+      .nav-link {
+        color: $text-color;
+        transition: 0.3s all ease-in-out;
+        line-height: 2.8rem;
+        &::after {
+          content: "\ea4e";
+          font-family: remixicon !important;
+          border: 0;
+          vertical-align: middle;
+          color: inherit;
+        }
+      }
+      .dropdown-menu {
+        li {
+          .dropdown-item {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      [type="search"] {
+        font-size: 1.5rem;
+      }
+      &.account {
+        border: 0;
+        margin-left: 0;
+        img {
+          border-radius: 50%;
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      .notification {
+        &-bell {
+          height: 0.5rem;
+          background: $danger;
+          width: 0.5rem;
+          border-radius: 50%;
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        }
+      }
+    }
+  }
+  .sec-menu {
+    padding: 1rem 0;
+    border-bottom: 1px solid $border-color;
+    &_list {
+      ul {
+        text-align: left;
+        margin: 0 auto 0 auto;
+        width: 100%;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        li {
+          a {
+            padding: 1.05rem 1.3rem 1.15rem 1.3rem;
+            border: 1px solid $border-color;
+            border-top: 0;
+            border-bottom: 0;
+            &.active {
+              color: $link-color;
+            }
+            i {
+              vertical-align: middle;
+              &:first-child {
+                padding-right: 0.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .fs-menu-mremove {
+      display: none;
+    }
+  }
+  // search
+  .m-search {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@include breakpoint("ipad-max") {
+  header {
+    .sec-menu {
+      height: auto;
+      min-height: 100%;
+      width: 25rem;
+      padding-bottom: 0;
+      display: none;
+      text-align: center;
+      background: $white-color;
+      border-right: 1px solid $border-color;
+      @include darkeffect();
+      transition: width ease-in 0.3s;
+      z-index: 99999;
+      position: fixed;
+      top: 0;
+      overflow: hidden;
+      padding-top: 4rem;
+      &.active {
+        display: block;
+      }
+      &_list {
+        ul {
+          flex-direction: column;
+          li {
+            margin-bottom: 1rem;
+            position: relative;
+            margin-left: 1.5rem;
+            a {
+              border: 0;
+              font-size: 2rem;
+              padding: 0;
+              i {
+                &:last-child {
+                  position: absolute;
+                  right: 1.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .fs-menu-mremove {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 2.5rem;
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .m-search.m-active {
+      display: block !important;
+      transition: opacity 2s ease-in;
+      opacity: 1;
+    }
+  }
+}

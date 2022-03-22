@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clont</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/m-logo.png">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="fs-menu">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <li class="nav-item m-0 d-block d-lg-none" onclick="seeMenuBtn()">
+                            <i class="ri-bar-chart-horizontal-line"></i>
+                        </li>
+                        <a class="navbar-brand" href="#">
+                            <img src="./assets/img/logo.png" class="d-none d-lg-block  d-logo" alt="">
+                            <img src="./assets/img/m-logo.png" class="d-block d-lg-none m-logo" alt="">
+                        </a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+                            <li class="nav-item dropdown">
+                                <i class="ri-codepen-line"></i>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Projects
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <i class="ri-settings-5-line"></i>
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    settings
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="d-flex">
+                            <ul class="navbar-nav flex-row">
+                                <li class="nav-item" id="search-btn">
+                                    <input type="search" class="form-control border-0 shadow-none d-none d-lg-block"
+                                        placeholder="Search.">
+                                    <button class="p-0 btn shadow-none" onclick="appSeaBtn()">
+                                        <i class="ri-search-line"></i>
+                                    </button>
+                                </li>
+                                <li class="nav-item" id="full-secreen">
+                                    <i class="ri-fullscreen-exit-line"></i>
+                                </li>
+                                <li class="nav-item notification">
+                                    <span class="notification-bell"></span>
+                                    <i class="ri-notification-2-line"></i>
+                                </li>
+                                <li class="nav-item account">
+                                    <img src="./assets/img/user.png" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <!-- mobile search -->
+        <div class="m-search bg-light p-5">
+            <form>
+                <input type="search" class="form-control" placeholder="Search…">
+            </form>
+        </div>
+        <!-- mobile search -->
+        <div class="sec-menu ">
+            <div class="container">
+                <nav class="sec-menu_list">
+                    <ul>
+                        <li>
+                            <a href="#" class="active">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ri-layout-grid-line"></i>
+                                <span>widgets</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="fs-menu-mremove" onclick="removeMenu()">
+                <i class="ri-close-circle-line"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- breadcrumbs -->
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__left">
+                    <h4>Dashboard</h4>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Dashboard 01</a></li>
+                    </ol>
+                </div>
+                <div class="breadcrumbs__right ml-auto d-lg-flex d-none">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Actions
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="mx-4">
+                        <span>
+                            2,978 <small>( Visitor )</small>
+                        </span>
+                        <span class="mx-4">
+                            6,978 <small>( Followers )</small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb end -->
+            <!-- main row -->
+            <div class="row">
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body pb-0">
+                            <div class="">
+                                <p class="mb-2">
+                                    <i class="ri-line-chart-line mr-2"></i>
+                                    <span>Total Sales</span>
+                                </p>
+                                <h2 class="mb-0">4,786<span class="fs-5 text-muted"><span class="text-success mr-1">
+                                            <i class="ri-arrow-up-line"></i> 12%</span> since last week</span></h2>
+                            </div>
+                        </div>
+                        <div class="g-bottom">
+                            <img src="./assets/img/card-b.png" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body pb-0">
+                            <div class="">
+                                <p class="mb-2">
+                                    <i class="ri-line-chart-line mr-2"></i>
+                                    <span>Total Sales</span>
+                                </p>
+                                <h2 class="mb-0">4,786<span class="fs-5 text-muted"><span class="text-success mr-1">
+                                            <i class="ri-arrow-up-line"></i> 12%</span> since last week</span></h2>
+                            </div>
+                        </div>
+                        <div class="g-bottom">
+                            <img src="./assets/img/card-b.png" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body pb-0">
+                            <div class="">
+                                <p class="mb-2">
+                                    <i class="ri-line-chart-line mr-2"></i>
+                                    <span>Total Sales</span>
+                                </p>
+                                <h2 class="mb-0">4,786<span class="fs-5 text-muted"><span class="text-success mr-1">
+                                            <i class="ri-arrow-up-line"></i> 12%</span> since last week</span></h2>
+                            </div>
+                        </div>
+                        <div class="g-bottom">
+                            <img src="./assets/img/card-b.png" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-12">
+                    <div class="card">
+                        <div class="card-body pb-0">
+                            <div class="">
+                                <p class="mb-2">
+                                    <i class="ri-line-chart-line mr-2"></i>
+                                    <span>Total Sales</span>
+                                </p>
+                                <h2 class="mb-0">4,786<span class="fs-5 text-muted"><span class="text-success mr-1">
+                                            <i class="ri-arrow-up-line"></i> 12%</span> since last week</span></h2>
+                            </div>
+                        </div>
+                        <div class="g-bottom">
+                            <img src="./assets/img/card-b.png" class="img-fluid w-100" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-xl-7">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">overview of revenue and profit</h3>
+                            <div class="card-opt">
+                                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                                    aria-controls="collapseExample">
+                                    <i class="ri-arrow-up-s-line"></i>
+                                </a>
+                                <a href="#" id="card-remove">
+                                    <i class="ri-close-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body" id="collapseExample">
+                            <div class="row mb-5">
+                                <div class="col-12 col-lg-4">
+                                    <p class="mb-0">This year sales</p>
+                                    <h2>
+                                        35,879
+                                        <span class="fs-5 text-muted">
+                                            <span class="text-danger mr-2">
+                                                <i class="ri-arrow-down-line"></i>
+                                                0.9%
+                                            </span>
+                                            last yeas
+                                        </span>
+                                    </h2>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <p class="mb-0">This year sales</p>
+                                    <h2>
+                                        35,879
+                                        <span class="fs-5 text-muted">
+                                            <span class="text-danger mr-2">
+                                                <i class="ri-arrow-down-line"></i>
+                                                0.9%
+                                            </span>
+                                            last yeas
+                                        </span>
+                                    </h2>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <p class="mb-0">This year sales</p>
+                                    <h2>
+                                        35,879
+                                        <span class="fs-5 text-muted">
+                                            <span class="text-danger mr-2">
+                                                <i class="ri-arrow-down-line"></i>
+                                                0.9%
+                                            </span>
+                                            last yeas
+                                        </span>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div>
+                                <img src="./assets/img/main-g.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Monthly sales growth</h3>
+                            <div class="card-opt">
+                                <a href="#">
+                                    <i class="ri-arrow-up-s-line"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="ri-close-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <span>sales revenue</span>
+                                    <h3 class="mb-2">$5,89,268
+                                        <span class="text-danger fs-5">last 6 months</span>
+                                    </h3>
+                                    <p class="text-muted fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Tempora aspernatur possimus doloremque modi commodi repellendus.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="./assets/img/circle.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title mb-2">
+                                Sales Funnel & Avg. Length of Sales Stages
+                            </div>
+                            <div class="row">
+                                <img src="./assets/img/clist.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">overview of sales summary</h3>
+                            <div class="card-opt">
+                                <a href="#">
+                                    <i class="ri-arrow-up-s-line"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="ri-close-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 col-xl-3 col-md-6 mb-xl-0 mb-4 border-end">
+                                    <p class="mb-0">Total Revenue</p>
+                                    <h2 class="mb-3">
+                                        $38925
+                                        <span class="text-muted fs-5 ">weekly profit</span>
+                                    </h2>
+                                    <div class="progress progress-s">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 25%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-md-6 mb-xl-0 mb-4 border-end">
+                                    <p class="mb-0">Total Revenue</p>
+                                    <h2 class="mb-3">
+                                        $38925
+                                        <span class="text-muted fs-5 ml-2">weekly profit</span>
+                                    </h2>
+                                    <div class="progress progress-s">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 75%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-md-6 mb-xl-0 mb-4 border-end">
+                                    <p class="mb-0">Total Revenue</p>
+                                    <h2 class="mb-3">
+                                        $38925
+                                        <span class="text-muted fs-5 ml-2">weekly profit</span>
+                                    </h2>
+                                    <div class="progress progress-s">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-3 col-md-6 mb-xl-0 mb-4">
+                                    <p class="mb-0">Total Revenue</p>
+                                    <h2 class="mb-3">
+                                        $38925
+                                        <span class="text-muted fs-5 ml-2">weekly profit</span>
+                                    </h2>
+                                    <div class="progress progress-s">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 68%"
+                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                New users
+                            </h3>
+                            <div class="card-opt">
+                                <a href="#">
+                                    <i class="ri-arrow-up-s-line"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="ri-close-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-action">
+                                    <div class="d-flex ">
+                                        <img src="./assets/img/face1.jpg" class="rounded-circle me-3" alt="">
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <div class="d-flex align-items-center">
+                                                <div class="mt-2">
+                                                    <h5 class="text-dark">Tim Gray</h5>
+                                                    <p class="mb-0 text-muted">User ID: #1234</p>
+                                                </div>
+                                                <small class="ms-auto text-muted fs-2">
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-question-answer-line"></i></a>
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-settings-4-line"></i></a>
+                                                    <a href="#" class="text-muted"> <i
+                                                            class="ri-delete-bin-line"></i></a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <div class="d-flex ">
+                                        <img src="./assets/img/face1.jpg" class="rounded-circle me-3" alt="">
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <div class="d-flex align-items-center">
+                                                <div class="mt-2">
+                                                    <h5 class="text-dark">Tim Gray</h5>
+                                                    <p class="mb-0 text-muted">User ID: #1234</p>
+                                                </div>
+                                                <small class="ms-auto text-muted fs-2">
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-question-answer-line"></i></a>
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-settings-4-line"></i></a>
+                                                    <a href="#" class="text-muted"> <i
+                                                            class="ri-delete-bin-line"></i></a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <div class="d-flex ">
+                                        <img src="./assets/img/face1.jpg" class="rounded-circle me-3" alt="">
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <div class="d-flex align-items-center">
+                                                <div class="mt-2">
+                                                    <h5 class="text-dark">Tim Gray</h5>
+                                                    <p class="mb-0 text-muted">User ID: #1234</p>
+                                                </div>
+                                                <small class="ms-auto text-muted fs-2">
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-question-answer-line"></i></a>
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-settings-4-line"></i></a>
+                                                    <a href="#" class="text-muted"> <i
+                                                            class="ri-delete-bin-line"></i></a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <div class="d-flex ">
+                                        <img src="./assets/img/face1.jpg" class="rounded-circle me-3" alt="">
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <div class="d-flex align-items-center">
+                                                <div class="mt-2">
+                                                    <h5 class="text-dark">Tim Gray</h5>
+                                                    <p class="mb-0 text-muted">User ID: #1234</p>
+                                                </div>
+                                                <small class="ms-auto text-muted fs-2">
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-question-answer-line"></i></a>
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-settings-4-line"></i></a>
+                                                    <a href="#" class="text-muted"> <i
+                                                            class="ri-delete-bin-line"></i></a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <div class="d-flex ">
+                                        <img src="./assets/img/face1.jpg" class="rounded-circle me-3" alt="">
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <div class="d-flex align-items-center">
+                                                <div class="mt-2">
+                                                    <h5 class="text-dark">Tim Gray</h5>
+                                                    <p class="mb-0 text-muted">User ID: #1234</p>
+                                                </div>
+                                                <small class="ms-auto text-muted fs-2">
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-question-answer-line"></i></a>
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-settings-4-line"></i></a>
+                                                    <a href="#" class="text-muted"> <i
+                                                            class="ri-delete-bin-line"></i></a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item list-group-item-action">
+                                    <div class="d-flex ">
+                                        <img src="./assets/img/face1.jpg" class="rounded-circle me-3" alt="">
+                                        <div class="flex-shrink-1 flex-grow-1">
+                                            <div class="d-flex align-items-center">
+                                                <div class="mt-2">
+                                                    <h5 class="text-dark">Tim Gray</h5>
+                                                    <p class="mb-0 text-muted">User ID: #1234</p>
+                                                </div>
+                                                <small class="ms-auto text-muted fs-2">
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-question-answer-line"></i></a>
+                                                    <a href="#" class="text-muted"><i
+                                                            class="ri-settings-4-line"></i></a>
+                                                    <a href="#" class="text-muted"> <i
+                                                            class="ri-delete-bin-line"></i></a>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                Countrywise Sales Performance
+                            </h3>
+                            <div class="card-opt">
+                                <a href="#">
+                                    <i class="ri-arrow-up-s-line"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="ri-close-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-group border-0">
+                                <li class="list-group-item d-flex align-items-center justify-content-between border-0">
+                                    <img src="./assets/img/india.png" class="img-icon img-fluid" alt="">
+                                    <div class="w-100 px-5">
+                                        <p class="mb-2">India</p>
+                                        <div class="progress progress-s">
+                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>$6486</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-between border-0">
+                                    <img src="./assets/img/india.png" class="img-icon img-fluid" alt="">
+                                    <div class="w-100 px-5">
+                                        <p class="mb-2">India</p>
+                                        <div class="progress progress-s">
+                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>$6486</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-between border-0">
+                                    <img src="./assets/img/india.png" class="img-icon img-fluid" alt="">
+                                    <div class="w-100 px-5">
+                                        <p class="mb-2">India</p>
+                                        <div class="progress progress-s">
+                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>$6486</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-between border-0">
+                                    <img src="./assets/img/india.png" class="img-icon img-fluid" alt="">
+                                    <div class="w-100 px-5">
+                                        <p class="mb-2">India</p>
+                                        <div class="progress progress-s">
+                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>$6486</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-between border-0">
+                                    <img src="./assets/img/india.png" class="img-icon img-fluid" alt="">
+                                    <div class="w-100 px-5">
+                                        <p class="mb-2">India</p>
+                                        <div class="progress progress-s">
+                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>$6486</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-between border-0">
+                                    <img src="./assets/img/india.png" class="img-icon img-fluid" alt="">
+                                    <div class="w-100 px-5">
+                                        <p class="mb-2">India</p>
+                                        <div class="progress progress-s">
+                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>$6486</span>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-between border-0">
+                                    <img src="./assets/img/india.png" class="img-icon img-fluid" alt="">
+                                    <div class="w-100 px-5">
+                                        <p class="mb-2">India</p>
+                                        <div class="progress progress-s">
+                                            <div class="progress-bar bg-info" style="width: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span>$6486</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-4">
+                    <div class="card bg-primary">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <div class="text-white">
+                                    <h2 class="mb-2">24 days</h2>
+                                    <p class=" mb-0">Avg Sales Cycle length</p>
+                                </div>
+                                <div class="ms-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z"
+                                            fill="rgba(255,255,255,1)" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="mb-0">Total earnings of this year</p>
+                            <h2>$5,69,265
+                                <span class="fs-5 text-muted">
+                                    <span class="text-success">
+                                        <i class="ri-arrow-up-line"></i>
+                                        0.15%
+                                    </span>
+                                    last year
+                                </span>
+                            </h2>
+                            <div class="row mt-4">
+                                <div class="col-4 border-end">
+                                    <p class="mb-0 text-muted">This month</p>
+                                    <h4>34%</h4>
+                                </div>
+                                <div class="col-4 border-end ">
+                                    <p class="mb-0 text-muted">Last month</p>
+                                    <h4>67%</h4>
+                                </div>
+                                <div class="col-4">
+                                    <p class="mb-0 text-muted">Total</p>
+                                    <h4>$63,456</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="mb-0">Total earnings of this year</p>
+                            <h2>$5,69,265
+                                <span class="fs-5 text-muted">
+                                    <span class="text-success">
+                                        <i class="ri-arrow-up-line"></i>
+                                        0.15%
+                                    </span>
+                                    last year
+                                </span>
+                            </h2>
+                            <div class="row mt-4">
+                                <div class="col-4 border-end">
+                                    <p class="mb-0 text-muted">This month</p>
+                                    <h4>34%</h4>
+                                </div>
+                                <div class="col-4 border-end ">
+                                    <p class="mb-0 text-muted">Last month</p>
+                                    <h4>67%</h4>
+                                </div>
+                                <div class="col-4">
+                                    <p class="mb-0 text-muted">Total</p>
+                                    <h4>$63,456</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </div>
+        <!-- main row end-->
+
+        </div>
+    </main>
+</body>
+<script src="assets/vendor/jQuery/jquery.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+
+</html>
